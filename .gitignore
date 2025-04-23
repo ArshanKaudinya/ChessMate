@@ -1,0 +1,34 @@
+# Python
+*.pyc
+__pycache__/
+.venv/
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# Node (Tauri frontend)
+apps/desktop-tauri/node_modules/
+apps/desktop-tauri/dist/
+
+# Stockfish binaries
+engines/stockfish/**/stockfish
+engines/stockfish/**/*.tar*
+engines/stockfish/**/*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Virtualenv leftovers
+pip-log.txt
+
+# Cache & build
+*.egg-info/
+.cache/
+build/
+dist/

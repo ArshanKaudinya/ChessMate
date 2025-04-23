@@ -1,0 +1,19 @@
+- id: blunder
+  when: eval_drop >= 250
+  short: "Big blunder."
+  long:  "You just dropped serious material or got mated soon."
+
+- id: mistake
+  when: eval_drop >= 100
+  short: "Clear mistake."
+  long:  "Engine shows ~1 pawn loss."
+
+- id: early_queen
+  when: ply <= 10 and piece_moved == "Q"
+  short: "Queen out too early."
+  long:  "Early queen moves get chased and waste tempi."
+
+- id: king_pawn_push
+  when: moved_pawn_file in ["g","h"] and not castled and eval_drop >= 80
+  short: "King feels a draft."
+  long:  "Flank pawn pushes before castling weaken king safety."
